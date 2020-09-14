@@ -11,34 +11,36 @@ root.title("Periodic Table")
 root.geometry('1260x1000')
 
 # Lable indicating the output
-l = Label(root, text="OUTPUT", bg="red").place(x=230, y=500)
+Label(root, text="OUTPUT", bg="red").place(x=230, y=600)
 
 # generating textbox
-outputtxt = Text(root, height=10, width=50, bg="lightcyan").place(x=300, y=505)
+display = Text(
+    root,
+    height=5,
+    width=20,
+    font=('arial', 20, 'bold'),
+)
+display.place(x=300, y=540)
 
 
 # defining the function
 def detail(element, name):
-    msg = messagebox.Message(
-        root,
-        message=
-        f"Symbol: {element}\nAtomic Number: 1\nAtomic Mass: 1.0079\nElement: {name}"
-    )
-    msg.show()
-    print(
-        f"Symbol: {element}\nAtomic Number: 1\nAtomic Mass: 1.0079\nElement: {name}"
-    )
+    data = "Symbol: {}\nAtomic Number: 1\nAtomic Mass: 1.0079\nElement: {}".format(
+        element, name)
+    display.__dir__()
+    display.delete(1.0, END)
+    display.insert(INSERT, data)
+    print(data)
 
 
 # First Coloumn Elements
-
 btn = Button(
     root,
     text="H",
     fg="springgreen",
     bg="black",
     bd=7,
-    width=6,
+    width=4,
     height=2,
     command=lambda: detail("H", "Hydrogen"))  # do this for all elements
 btn.grid(column=1, row=0)
@@ -47,7 +49,7 @@ btn = Button(root,
              fg="orange",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=1, row=1)
@@ -56,7 +58,7 @@ btn = Button(root,
              fg="orange",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=1, row=2)
@@ -65,7 +67,7 @@ btn = Button(root,
              fg="orange",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=1, row=3)
@@ -74,7 +76,7 @@ btn = Button(root,
              fg="orange",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=1, row=4)
@@ -83,7 +85,7 @@ btn = Button(root,
              fg="orange",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=1, row=5)
@@ -92,7 +94,7 @@ btn = Button(root,
              fg="orange",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=1, row=6)
@@ -104,7 +106,7 @@ btn = Button(root,
              fg="yellow",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=2, row=1)
@@ -113,7 +115,7 @@ btn = Button(root,
              fg="yellow",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=2, row=2)
@@ -122,7 +124,7 @@ btn = Button(root,
              fg="yellow",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=2, row=3)
@@ -131,7 +133,7 @@ btn = Button(root,
              fg="yellow",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=2, row=4)
@@ -140,7 +142,7 @@ btn = Button(root,
              fg="yellow",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=2, row=5)
@@ -149,7 +151,7 @@ btn = Button(root,
              fg="yellow",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=2, row=6)
@@ -161,7 +163,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=3, row=3)
@@ -170,7 +172,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=3, row=4)
@@ -179,7 +181,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=3, row=5)
@@ -188,7 +190,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=3, row=6)
@@ -200,7 +202,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=4, row=3)
@@ -209,7 +211,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=4, row=4)
@@ -218,7 +220,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=4, row=5)
@@ -227,7 +229,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=4, row=6)
@@ -239,7 +241,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=5, row=3)
@@ -248,7 +250,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=5, row=4)
@@ -257,7 +259,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=5, row=5)
@@ -266,7 +268,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=5, row=6)
@@ -278,7 +280,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=6, row=3)
@@ -287,7 +289,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=6, row=4)
@@ -296,7 +298,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=6, row=5)
@@ -305,7 +307,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=6, row=6)
@@ -317,7 +319,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=7, row=3)
@@ -326,7 +328,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=7, row=4)
@@ -335,7 +337,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=7, row=5)
@@ -344,7 +346,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=7, row=6)
@@ -356,7 +358,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=8, row=3)
@@ -365,7 +367,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=8, row=4)
@@ -374,7 +376,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=8, row=5)
@@ -383,7 +385,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=8, row=6)
@@ -395,7 +397,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=9, row=3)
@@ -404,7 +406,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=9, row=4)
@@ -413,7 +415,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=9, row=5)
@@ -422,7 +424,7 @@ btn = Button(root,
              fg="silver",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=9, row=6)
@@ -434,7 +436,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=10, row=3)
@@ -443,7 +445,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=10, row=4)
@@ -452,7 +454,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=10, row=5)
@@ -461,7 +463,7 @@ btn = Button(root,
              fg="silver",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=10, row=6)
@@ -473,7 +475,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=11, row=3)
@@ -482,7 +484,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=11, row=4)
@@ -491,7 +493,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=11, row=5)
@@ -500,7 +502,7 @@ btn = Button(root,
              fg="silver",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=11, row=6)
@@ -512,7 +514,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=12, row=3)
@@ -521,7 +523,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=12, row=4)
@@ -530,7 +532,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=12, row=5)
@@ -539,7 +541,7 @@ btn = Button(root,
              fg="red",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=12, row=6)
@@ -551,7 +553,7 @@ btn = Button(root,
              fg="limegreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=13, row=1)
@@ -560,7 +562,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=13, row=2)
@@ -569,7 +571,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=13, row=3)
@@ -578,7 +580,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=13, row=4)
@@ -587,7 +589,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=13, row=5)
@@ -596,7 +598,7 @@ btn = Button(root,
              fg="silver",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=13, row=6)
@@ -608,7 +610,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=14, row=1)
@@ -617,7 +619,7 @@ btn = Button(root,
              fg="limegreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=14, row=2)
@@ -626,7 +628,7 @@ btn = Button(root,
              fg="limegreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=14, row=3)
@@ -635,7 +637,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=14, row=4)
@@ -644,7 +646,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=14, row=5)
@@ -653,7 +655,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=14, row=6)
@@ -665,7 +667,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=15, row=1)
@@ -674,7 +676,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=15, row=2)
@@ -683,7 +685,7 @@ btn = Button(root,
              fg="limegreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=15, row=3)
@@ -692,7 +694,7 @@ btn = Button(root,
              fg="limegreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=15, row=4)
@@ -701,7 +703,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=15, row=5)
@@ -710,7 +712,7 @@ btn = Button(root,
              fg="silver",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=15, row=6)
@@ -722,7 +724,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=16, row=1)
@@ -731,7 +733,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=16, row=2)
@@ -740,7 +742,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=16, row=3)
@@ -749,7 +751,7 @@ btn = Button(root,
              fg="limegreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=16, row=4)
@@ -758,7 +760,7 @@ btn = Button(root,
              fg="green",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=16, row=5)
@@ -767,7 +769,7 @@ btn = Button(root,
              fg="silver",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=16, row=6)
@@ -779,7 +781,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=17, row=1)
@@ -788,7 +790,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=17, row=2)
@@ -797,7 +799,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=17, row=3)
@@ -806,7 +808,7 @@ btn = Button(root,
              fg="springgreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=17, row=4)
@@ -815,7 +817,7 @@ btn = Button(root,
              fg="limegreen",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=17, row=5)
@@ -824,7 +826,7 @@ btn = Button(root,
              fg="silver",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=17, row=6)
@@ -836,7 +838,7 @@ btn = Button(root,
              fg="skyblue",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=18, row=0)
@@ -845,7 +847,7 @@ btn = Button(root,
              fg="skyblue",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=18, row=1)
@@ -854,7 +856,7 @@ btn = Button(root,
              fg="skyblue",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=18, row=2)
@@ -863,7 +865,7 @@ btn = Button(root,
              fg="skyblue",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=18, row=3)
@@ -872,7 +874,7 @@ btn = Button(root,
              fg="skyblue",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=18, row=4)
@@ -881,7 +883,7 @@ btn = Button(root,
              fg="skyblue",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=18, row=5)
@@ -890,7 +892,7 @@ btn = Button(root,
              fg="silver",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=18, row=6)
@@ -902,7 +904,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=4, row=8, pady=20)
@@ -911,7 +913,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=5, row=8, pady=20)
@@ -920,7 +922,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=6, row=8, pady=20)
@@ -929,7 +931,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=7, row=8, pady=20)
@@ -938,7 +940,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=8, row=8, pady=20)
@@ -947,7 +949,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=9, row=8, pady=20)
@@ -956,7 +958,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=10, row=8, pady=20)
@@ -965,7 +967,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=11, row=8, pady=20)
@@ -974,7 +976,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=12, row=8, pady=20)
@@ -983,7 +985,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=13, row=8, pady=20)
@@ -992,7 +994,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=14, row=8, pady=20)
@@ -1001,7 +1003,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=15, row=8, pady=20)
@@ -1010,7 +1012,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=16, row=8, pady=20)
@@ -1019,7 +1021,7 @@ btn = Button(root,
              fg="bisque",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=17, row=8, pady=20)
@@ -1031,7 +1033,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=4, row=9, pady=1)
@@ -1040,7 +1042,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=5, row=9, pady=1)
@@ -1049,7 +1051,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=6, row=9, pady=1)
@@ -1058,7 +1060,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=7, row=9, pady=1)
@@ -1067,7 +1069,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=8, row=9, pady=1)
@@ -1076,7 +1078,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=9, row=9, pady=1)
@@ -1085,7 +1087,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=10, row=9, pady=1)
@@ -1094,7 +1096,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=11, row=9, pady=1)
@@ -1103,7 +1105,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=12, row=9, pady=1)
@@ -1112,7 +1114,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=13, row=9, pady=1)
@@ -1121,7 +1123,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=14, row=9, pady=1)
@@ -1130,7 +1132,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=15, row=9, pady=1)
@@ -1139,7 +1141,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=16, row=9, pady=1)
@@ -1148,7 +1150,7 @@ btn = Button(root,
              fg="lightsalmon",
              bg="black",
              bd=7,
-             width=6,
+             width=4,
              height=2,
              command=lambda: detail("Li", "Lithium"))
 btn.grid(column=17, row=9, pady=1)
